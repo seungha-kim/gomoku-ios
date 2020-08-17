@@ -3,16 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2AE17A1F24EA6F8A0073AA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A1E24EA6F8A0073AA3D /* AppDelegate.swift */; };
 		2AE17A2124EA6F8A0073AA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A2024EA6F8A0073AA3D /* SceneDelegate.swift */; };
 		2AE17A2324EA6F8A0073AA3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A2224EA6F8A0073AA3D /* ViewController.swift */; };
-		2AE17A2624EA6F8A0073AA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE17A2424EA6F8A0073AA3D /* Main.storyboard */; };
 		2AE17A2824EA6F8C0073AA3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AE17A2724EA6F8C0073AA3D /* Assets.xcassets */; };
 		2AE17A2B24EA6F8C0073AA3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AE17A2924EA6F8C0073AA3D /* LaunchScreen.storyboard */; };
+		2AE17A3424EA75580073AA3D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AE17A3324EA75580073AA3D /* SnapKit */; };
+		2AE17A3724EA77570073AA3D /* MyTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A3624EA77570073AA3D /* MyTestView.swift */; };
+		2AE17A3924EA86810073AA3D /* UIViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A3824EA86810073AA3D /* UIViewConfiguration.swift */; };
+		2AE17A3B24EA89490073AA3D /* GMKBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A3A24EA89490073AA3D /* GMKBoardView.swift */; };
+		2AE17A3E24EAAA110073AA3D /* GMKCellPos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A3D24EAAA110073AA3D /* GMKCellPos.swift */; };
+		2AE17A4024EAAA1B0073AA3D /* GMKCellState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A3F24EAAA1B0073AA3D /* GMKCellState.swift */; };
+		2AE17A4224EAB5790073AA3D /* GMKRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A4124EAB5790073AA3D /* GMKRound.swift */; };
+		2AE17A4424EAB7400073AA3D /* GMKPieceColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A4324EAB7400073AA3D /* GMKPieceColor.swift */; };
+		2AE17A4624EAB8220073AA3D /* GMKRoundEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A4524EAB8220073AA3D /* GMKRoundEvent.swift */; };
+		2AE17A4A24EAB9BA0073AA3D /* GMKRoundState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A4924EAB9BA0073AA3D /* GMKRoundState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +29,18 @@
 		2AE17A1E24EA6F8A0073AA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE17A2024EA6F8A0073AA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2AE17A2224EA6F8A0073AA3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2AE17A2524EA6F8A0073AA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2AE17A2724EA6F8C0073AA3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AE17A2A24EA6F8C0073AA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2AE17A2C24EA6F8C0073AA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AE17A3624EA77570073AA3D /* MyTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTestView.swift; sourceTree = "<group>"; };
+		2AE17A3824EA86810073AA3D /* UIViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewConfiguration.swift; sourceTree = "<group>"; };
+		2AE17A3A24EA89490073AA3D /* GMKBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKBoardView.swift; sourceTree = "<group>"; };
+		2AE17A3D24EAAA110073AA3D /* GMKCellPos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKCellPos.swift; sourceTree = "<group>"; };
+		2AE17A3F24EAAA1B0073AA3D /* GMKCellState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKCellState.swift; sourceTree = "<group>"; };
+		2AE17A4124EAB5790073AA3D /* GMKRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRound.swift; sourceTree = "<group>"; };
+		2AE17A4324EAB7400073AA3D /* GMKPieceColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKPieceColor.swift; sourceTree = "<group>"; };
+		2AE17A4524EAB8220073AA3D /* GMKRoundEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundEvent.swift; sourceTree = "<group>"; };
+		2AE17A4924EAB9BA0073AA3D /* GMKRoundState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE17A3424EA75580073AA3D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +74,39 @@
 		2AE17A1D24EA6F8A0073AA3D /* gomoku-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2AE17A3C24EAA9F60073AA3D /* model */,
+				2AE17A3524EA772D0073AA3D /* view */,
 				2AE17A1E24EA6F8A0073AA3D /* AppDelegate.swift */,
 				2AE17A2024EA6F8A0073AA3D /* SceneDelegate.swift */,
 				2AE17A2224EA6F8A0073AA3D /* ViewController.swift */,
-				2AE17A2424EA6F8A0073AA3D /* Main.storyboard */,
 				2AE17A2724EA6F8C0073AA3D /* Assets.xcassets */,
 				2AE17A2924EA6F8C0073AA3D /* LaunchScreen.storyboard */,
 				2AE17A2C24EA6F8C0073AA3D /* Info.plist */,
 			);
 			path = "gomoku-ios";
+			sourceTree = "<group>";
+		};
+		2AE17A3524EA772D0073AA3D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				2AE17A3624EA77570073AA3D /* MyTestView.swift */,
+				2AE17A3824EA86810073AA3D /* UIViewConfiguration.swift */,
+				2AE17A3A24EA89490073AA3D /* GMKBoardView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		2AE17A3C24EAA9F60073AA3D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				2AE17A3D24EAAA110073AA3D /* GMKCellPos.swift */,
+				2AE17A3F24EAAA1B0073AA3D /* GMKCellState.swift */,
+				2AE17A4324EAB7400073AA3D /* GMKPieceColor.swift */,
+				2AE17A4124EAB5790073AA3D /* GMKRound.swift */,
+				2AE17A4524EAB8220073AA3D /* GMKRoundEvent.swift */,
+				2AE17A4924EAB9BA0073AA3D /* GMKRoundState.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +125,9 @@
 			dependencies = (
 			);
 			name = "gomoku-ios";
+			packageProductDependencies = (
+				2AE17A3324EA75580073AA3D /* SnapKit */,
+			);
 			productName = "gomoku-ios";
 			productReference = 2AE17A1B24EA6F8A0073AA3D /* gomoku-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 2AE17A1224EA6F8A0073AA3D;
+			packageReferences = (
+				2AE17A3224EA75580073AA3D /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 2AE17A1C24EA6F8A0073AA3D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +175,6 @@
 			files = (
 				2AE17A2B24EA6F8C0073AA3D /* LaunchScreen.storyboard in Resources */,
 				2AE17A2824EA6F8C0073AA3D /* Assets.xcassets in Resources */,
-				2AE17A2624EA6F8A0073AA3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +185,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AE17A3B24EA89490073AA3D /* GMKBoardView.swift in Sources */,
+				2AE17A3E24EAAA110073AA3D /* GMKCellPos.swift in Sources */,
+				2AE17A4224EAB5790073AA3D /* GMKRound.swift in Sources */,
+				2AE17A3724EA77570073AA3D /* MyTestView.swift in Sources */,
+				2AE17A3924EA86810073AA3D /* UIViewConfiguration.swift in Sources */,
+				2AE17A4624EAB8220073AA3D /* GMKRoundEvent.swift in Sources */,
+				2AE17A4A24EAB9BA0073AA3D /* GMKRoundState.swift in Sources */,
 				2AE17A2324EA6F8A0073AA3D /* ViewController.swift in Sources */,
+				2AE17A4024EAAA1B0073AA3D /* GMKCellState.swift in Sources */,
 				2AE17A1F24EA6F8A0073AA3D /* AppDelegate.swift in Sources */,
 				2AE17A2124EA6F8A0073AA3D /* SceneDelegate.swift in Sources */,
+				2AE17A4424EAB7400073AA3D /* GMKPieceColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2AE17A2424EA6F8A0073AA3D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2AE17A2524EA6F8A0073AA3D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2AE17A2924EA6F8C0073AA3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -338,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AE17A3224EA75580073AA3D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AE17A3324EA75580073AA3D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AE17A3224EA75580073AA3D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AE17A1324EA6F8A0073AA3D /* Project object */;
 }

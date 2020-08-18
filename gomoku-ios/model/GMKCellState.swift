@@ -8,7 +8,16 @@
 
 import Foundation
 
-enum GMKCellState: Equatable {
+enum GMKCellState {
     case empty
     case filled(color: GMKPieceColor)
+    
+    var isEmpty: Bool {
+        switch self {
+        case .empty:
+            return true
+        default:
+            return false
+        }
+    }
 }

@@ -14,19 +14,23 @@ class GMKRound {
     
     weak var delegate: GMKRoundDelegate?
     
-    private var table: [[GMKCellState]]
-    private var currentPieceColor: GMKPieceColor = .black
+    private var table: GMKTable
+    private var currentTurnColor: GMKPieceColor = .black
+    private let rule: GMKRoundRule
     
-    init() {
-        table = Array(repeating: Array(repeating: .empty, count: Self.COL_COUNT), count: Self.ROW_COUNT)
+    init(rule: GMKRoundRule) {
+        self.rule = rule
+        table = GMKTable(rowCount: Self.ROW_COUNT, colCount: Self.COL_COUNT)
     }
     
     func tryMove(at pos: GMKCellPos) {
-        guard table[pos.row][pos.col] == .empty else { return }
+        let cellState = table.getState(at: pos)
+        guard cellState.isEmpty else { return }
         
-        table[pos.row][pos.col] = .filled(color: currentPieceColor)
-        delegate?.roundUpdated(with: .cellFilled(pos: pos, color: currentPieceColor))
-        currentPieceColor.toggle()
+        table.setState(at: pos, state: .filled(color: currentTurnColor))
+        delegate?.roundUpdated(with: .cellFilled(pos: pos, color: currentTurnColor))
+        currentTurnColor.toggle()
+        print(rule.determineWinner(table: table))
     }
 }
 

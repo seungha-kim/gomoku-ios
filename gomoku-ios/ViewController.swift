@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     lazy var myTestView = MyTestView()
     lazy var boardView = GMKBoardView()
 
-    var round = GMKRound()
+    var round = GMKRound(rule: GMKRoundRuleBasicImpl())
 
     override func viewDidLoad() {
         super.viewDidLoad()

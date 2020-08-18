@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A88C5C124EC28B600D35960 /* GMKTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C024EC28B600D35960 /* GMKTable.swift */; };
+		2A88C5C324EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C224EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift */; };
+		2A88C5C524EC2ADE00D35960 /* GMKRoundRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C424EC2ADE00D35960 /* GMKRoundRule.swift */; };
+		2A88C5C724EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C624EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift */; };
 		2AE17A1F24EA6F8A0073AA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A1E24EA6F8A0073AA3D /* AppDelegate.swift */; };
 		2AE17A2124EA6F8A0073AA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A2024EA6F8A0073AA3D /* SceneDelegate.swift */; };
 		2AE17A2324EA6F8A0073AA3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A2224EA6F8A0073AA3D /* ViewController.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A88C5C024EC28B600D35960 /* GMKTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKTable.swift; sourceTree = "<group>"; };
+		2A88C5C224EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundWinnerDetermination.swift; sourceTree = "<group>"; };
+		2A88C5C424EC2ADE00D35960 /* GMKRoundRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundRule.swift; sourceTree = "<group>"; };
+		2A88C5C624EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundRuleBasicImpl.swift; sourceTree = "<group>"; };
 		2AE17A1B24EA6F8A0073AA3D /* gomoku-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gomoku-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE17A1E24EA6F8A0073AA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE17A2024EA6F8A0073AA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +113,10 @@
 				2AE17A4124EAB5790073AA3D /* GMKRound.swift */,
 				2AE17A4524EAB8220073AA3D /* GMKRoundEvent.swift */,
 				2AE17A4924EAB9BA0073AA3D /* GMKRoundState.swift */,
+				2A88C5C024EC28B600D35960 /* GMKTable.swift */,
+				2A88C5C224EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift */,
+				2A88C5C424EC2ADE00D35960 /* GMKRoundRule.swift */,
+				2A88C5C624EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -194,9 +206,13 @@
 				2AE17A4A24EAB9BA0073AA3D /* GMKRoundState.swift in Sources */,
 				2AE17A2324EA6F8A0073AA3D /* ViewController.swift in Sources */,
 				2AE17A4024EAAA1B0073AA3D /* GMKCellState.swift in Sources */,
+				2A88C5C724EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift in Sources */,
+				2A88C5C524EC2ADE00D35960 /* GMKRoundRule.swift in Sources */,
 				2AE17A1F24EA6F8A0073AA3D /* AppDelegate.swift in Sources */,
 				2AE17A2124EA6F8A0073AA3D /* SceneDelegate.swift in Sources */,
+				2A88C5C324EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift in Sources */,
 				2AE17A4424EAB7400073AA3D /* GMKPieceColor.swift in Sources */,
+				2A88C5C124EC28B600D35960 /* GMKTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,7 @@
 import Foundation
 
 class GMKRound {
-    static let COL_COUNT: Int = 15
-    static let ROW_COUNT: Int = 15
+    static let EDGE_LENGTH: Int = 15
     
     weak var delegate: GMKRoundDelegate?
     
@@ -20,7 +19,7 @@ class GMKRound {
     
     init(rule: GMKRoundRule) {
         self.rule = rule
-        table = GMKTable(rowCount: Self.ROW_COUNT, colCount: Self.COL_COUNT)
+        table = GMKTable(edgeLength: Self.EDGE_LENGTH)
     }
     
     func tryMove(at pos: GMKCellPos) {

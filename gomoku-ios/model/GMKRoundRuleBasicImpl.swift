@@ -38,10 +38,17 @@ private struct BasicWalker {
 
 class GMKRoundRuleBasicImpl: GMKRoundRule {
     func determineWinner(table: GMKTable) -> GMKRoundWinnerDetermination {
-        // TODO: 대각선 로직
         let anyDetermined = GMKRoundWinnerDetermination.any([
             determineWinnerByHorizontalView(table: table),
-            determienWinnerByVerticalView(table: table)
+            determineWinnerByVerticalView(table: table),
+            // diagonal
+            determineWinnerByUpperDiagonalView(table: table),
+            determineWinnerByLowerDiagonalView(table: table),
+            determineWinnerByMiddleDiagonalView(table: table),
+            // anti-diagonal
+            determineWinnerByUpperAntiDiagonalView(table: table),
+            determineWinnerByLowerAntiDiagonalView(table: table),
+            determineWinnerByMiddleAntiDiagonalView(table: table),
         ])
         
         if anyDetermined.isFinal {
@@ -54,9 +61,9 @@ class GMKRoundRuleBasicImpl: GMKRoundRule {
     }
     
     private func determineWinnerByHorizontalView(table: GMKTable) -> GMKRoundWinnerDetermination {
-        for row in 0..<table.rowCount {
+        for row in 0..<table.edgeLength {
             var walker = BasicWalker()
-            for col in 0..<table.colCount {
+            for col in 0..<table.edgeLength {
                 let cellState = table.getState(at: GMKCellPos(row: row, col: col))
                 let determination = walker.checkCell(cellState: cellState)
                 if determination.isFinal {
@@ -67,15 +74,144 @@ class GMKRoundRuleBasicImpl: GMKRoundRule {
         return .notYet
     }
     
-    private func determienWinnerByVerticalView(table: GMKTable) -> GMKRoundWinnerDetermination {
-        for col in 0..<table.colCount {
+    private func determineWinnerByVerticalView(table: GMKTable) -> GMKRoundWinnerDetermination {
+        for col in 0..<table.edgeLength {
             var walker = BasicWalker()
-            for row in 0..<table.rowCount {
+            for row in 0..<table.edgeLength {
                 let cellState = table.getState(at: GMKCellPos(row: row, col: col))
                 let determination = walker.checkCell(cellState: cellState)
                 if determination.isFinal {
                     return determination
                 }
+            }
+        }
+        return .notYet
+    }
+    
+    // -***
+    // --**
+    // ---*
+    // ----
+    private func determineWinnerByUpperDiagonalView(table: GMKTable) -> GMKRoundWinnerDetermination {
+        for lineLength in 1..<table.edgeLength {
+            if lineLength < 5 {
+                continue
+            }
+            var walker = BasicWalker()
+            for i in 0..<lineLength {
+                let row = i
+                let col = table.edgeLength - lineLength + i
+                let cellState = table.getState(at: GMKCellPos(row: row, col: col))
+                let determination = walker.checkCell(cellState: cellState)
+                if determination.isFinal {
+                    return determination
+                }
+            }
+        }
+        return .notYet
+    }
+    
+    // ----
+    // *---
+    // **--
+    // ***-
+    private func determineWinnerByLowerDiagonalView(table: GMKTable) -> GMKRoundWinnerDetermination {
+        for lineLength in 1..<table.edgeLength {
+            if lineLength < 5 {
+                continue
+            }
+            var walker = BasicWalker()
+            for i in 0..<lineLength {
+                let row = table.edgeLength - 1 - i
+                let col = lineLength - 1 - i
+                let cellState = table.getState(at: GMKCellPos(row: row, col: col))
+                let determination = walker.checkCell(cellState: cellState)
+                if determination.isFinal {
+                    return determination
+                }
+            }
+        }
+        return .notYet
+    }
+    
+    // *---
+    // -*--
+    // --*-
+    // ---*
+    private func determineWinnerByMiddleDiagonalView(table: GMKTable) -> GMKRoundWinnerDetermination {
+        var walker = BasicWalker()
+        for i in 0..<table.edgeLength {
+            let row = i
+            let col = i
+            let cellState = table.getState(at: GMKCellPos(row: row, col: col))
+            let determination = walker.checkCell(cellState: cellState)
+            if determination.isFinal {
+                return determination
+            }
+        }
+        return .notYet
+    }
+    
+    // ***-
+    // **--
+    // *---
+    // ----
+    private func determineWinnerByUpperAntiDiagonalView(table: GMKTable) -> GMKRoundWinnerDetermination {
+        for lineLength in 1..<table.edgeLength {
+            if lineLength < 5 {
+                continue
+            }
+            var walker = BasicWalker()
+            for i in 0..<lineLength {
+                let row = i
+                let col = lineLength - 1 - i
+                let cellState = table.getState(at: GMKCellPos(row: row, col: col))
+                let determination = walker.checkCell(cellState: cellState)
+                if determination.isFinal {
+                    return determination
+                }
+            }
+        }
+        return .notYet
+    }
+    
+    // ----
+    // ---*
+    // --**
+    // -***
+    private func determineWinnerByLowerAntiDiagonalView(table: GMKTable) -> GMKRoundWinnerDetermination {
+        for lineLength in 1..<table.edgeLength {
+            if lineLength < 5 {
+                continue
+            }
+            var walker = BasicWalker()
+            for i in 0..<lineLength {
+                let row = table.edgeLength - 1 - i
+                let col = table.edgeLength - lineLength + i
+                let cellState = table.getState(at: GMKCellPos(row: row, col: col))
+                let determination = walker.checkCell(cellState: cellState)
+                if determination.isFinal {
+                    return determination
+                }
+            }
+        }
+        return .notYet
+    }
+    
+    // ---*
+    // --*-
+    // -*--
+    // *---
+    private func determineWinnerByMiddleAntiDiagonalView(table: GMKTable) -> GMKRoundWinnerDetermination {
+        let edgeLength = table.edgeLength
+        var walker = BasicWalker()
+        for i in 0..<table.edgeLength {
+            let row = edgeLength - 1 - i
+            let col = i
+            let cellState = table.getState(at: GMKCellPos(row: row, col: col))
+            let determination = walker.checkCell(cellState: cellState)
+            if determination.isFinal {
+                return determination
             }
         }
         return .notYet

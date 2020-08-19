@@ -9,20 +9,19 @@
 import Foundation
 
 class GMKTable {
-    let rowCount: Int
-    let colCount: Int
+    let edgeLength: Int
     var filledCellCount = 0
     var cellCount: Int {
         get {
-            rowCount * colCount
+            edgeLength * edgeLength
         }
     }
+    
     private var table: [[GMKCellState]]
     
-    init(rowCount: Int, colCount: Int) {
-        self.rowCount = rowCount
-        self.colCount = colCount
-        table = Array(repeating: Array(repeating: .empty, count: colCount), count: rowCount)
+    init(edgeLength: Int) {
+        self.edgeLength = edgeLength
+        table = Array(repeating: Array(repeating: .empty, count: edgeLength), count: edgeLength)
     }
     
     func getState(at pos: GMKCellPos) -> GMKCellState {

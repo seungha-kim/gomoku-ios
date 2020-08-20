@@ -11,6 +11,8 @@
 		2A88C5C324EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C224EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift */; };
 		2A88C5C524EC2ADE00D35960 /* GMKRoundRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C424EC2ADE00D35960 /* GMKRoundRule.swift */; };
 		2A88C5C724EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C624EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift */; };
+		2A88C5C924EEBFEB00D35960 /* GMKOfflineDualGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C824EEBFEB00D35960 /* GMKOfflineDualGameView.swift */; };
+		2A88C5CB24EEC26900D35960 /* GMKOfflineDualGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A88C5CA24EEC26900D35960 /* GMKOfflineDualGameView.xib */; };
 		2AE17A1F24EA6F8A0073AA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A1E24EA6F8A0073AA3D /* AppDelegate.swift */; };
 		2AE17A2124EA6F8A0073AA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A2024EA6F8A0073AA3D /* SceneDelegate.swift */; };
 		2AE17A2324EA6F8A0073AA3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A2224EA6F8A0073AA3D /* ViewController.swift */; };
@@ -33,6 +35,8 @@
 		2A88C5C224EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundWinnerDetermination.swift; sourceTree = "<group>"; };
 		2A88C5C424EC2ADE00D35960 /* GMKRoundRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundRule.swift; sourceTree = "<group>"; };
 		2A88C5C624EC2B0C00D35960 /* GMKRoundRuleBasicImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundRuleBasicImpl.swift; sourceTree = "<group>"; };
+		2A88C5C824EEBFEB00D35960 /* GMKOfflineDualGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKOfflineDualGameView.swift; sourceTree = "<group>"; };
+		2A88C5CA24EEC26900D35960 /* GMKOfflineDualGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GMKOfflineDualGameView.xib; sourceTree = "<group>"; };
 		2AE17A1B24EA6F8A0073AA3D /* gomoku-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gomoku-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE17A1E24EA6F8A0073AA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AE17A2024EA6F8A0073AA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +104,8 @@
 				2AE17A3624EA77570073AA3D /* MyTestView.swift */,
 				2AE17A3824EA86810073AA3D /* UIViewConfiguration.swift */,
 				2AE17A3A24EA89490073AA3D /* GMKBoardView.swift */,
+				2A88C5C824EEBFEB00D35960 /* GMKOfflineDualGameView.swift */,
+				2A88C5CA24EEC26900D35960 /* GMKOfflineDualGameView.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A88C5CB24EEC26900D35960 /* GMKOfflineDualGameView.xib in Resources */,
 				2AE17A2B24EA6F8C0073AA3D /* LaunchScreen.storyboard in Resources */,
 				2AE17A2824EA6F8C0073AA3D /* Assets.xcassets in Resources */,
 			);
@@ -203,6 +210,7 @@
 				2AE17A3724EA77570073AA3D /* MyTestView.swift in Sources */,
 				2AE17A3924EA86810073AA3D /* UIViewConfiguration.swift in Sources */,
 				2AE17A4624EAB8220073AA3D /* GMKRoundEvent.swift in Sources */,
+				2A88C5C924EEBFEB00D35960 /* GMKOfflineDualGameView.swift in Sources */,
 				2AE17A4A24EAB9BA0073AA3D /* GMKRoundState.swift in Sources */,
 				2AE17A2324EA6F8A0073AA3D /* ViewController.swift in Sources */,
 				2AE17A4024EAAA1B0073AA3D /* GMKCellState.swift in Sources */,

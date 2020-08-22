@@ -10,9 +10,12 @@ import UIKit
 import SnapKit
 
 class GMKOfflineDualGameView: UIView, UIViewConfiguration {
+    var boardView = GMKBoardView()
+    var delegate: GMKOfflineDualGameViewDelegate?
+    
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var boardSlot: UIView!
-    var boardView = GMKBoardView()
+    @IBOutlet weak var startButton: UIButton!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -40,6 +43,14 @@ class GMKOfflineDualGameView: UIView, UIViewConfiguration {
     }
     
     func configureActions() {
-        // TODO
+        startButton.addTarget(self, action: #selector(handleStart), for: .touchUpInside)
     }
+    
+    @objc private func handleStart() {
+        delegate?.gameViewReceivedStartAction()
+    }
+}
+
+protocol GMKOfflineDualGameViewDelegate {
+    func gameViewReceivedStartAction()
 }

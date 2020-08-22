@@ -77,12 +77,23 @@ class GMKBoardView: UIView, UIViewConfiguration {
     
     func updateCell(pos: GMKCellPos, state: GMKCellState) {
         let pieceLayer = pieceLayers[pos]
-        if case .filled(color: let color) = state {
+        switch state {
+        case .empty:
+            pieceLayer?.fillColor = nil
+        case .filled(color: let color):
             switch color {
             case .black:
                 pieceLayer?.fillColor = UIColor.black.cgColor
             case .white:
                 pieceLayer?.fillColor = UIColor.white.cgColor
+            }
+        }
+    }
+    
+    func reset() {
+        for row in 0..<GMKRound.EDGE_LENGTH {
+            for col in 0..<GMKRound.EDGE_LENGTH {
+                updateCell(pos: GMKCellPos(row: row, col: col), state: .empty)
             }
         }
     }

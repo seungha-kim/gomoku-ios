@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="boardSlot" destination="EAi-t7-06d" id="P5A-n0-8So"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="jN4-EJ-yQ5"/>
+                <outlet property="startButton" destination="Ucr-65-BAd" id="STY-xQ-xjn"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -25,11 +26,17 @@
                         <constraint firstAttribute="width" secondItem="EAi-t7-06d" secondAttribute="height" multiplier="1:1" id="8n2-pi-z7d"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucr-65-BAd">
+                    <rect key="frame" x="10" y="456" width="34" height="30"/>
+                    <state key="normal" title="Start"/>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="Ucr-65-BAd" firstAttribute="leading" secondItem="EAi-t7-06d" secondAttribute="leading" id="9tR-fM-gDX"/>
                 <constraint firstItem="EAi-t7-06d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Bmj-vf-zfE"/>
                 <constraint firstItem="EAi-t7-06d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="QGv-dU-sgK"/>
+                <constraint firstItem="Ucr-65-BAd" firstAttribute="top" secondItem="EAi-t7-06d" secondAttribute="bottom" constant="8" id="klQ-QQ-3Y6"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EAi-t7-06d" secondAttribute="trailing" constant="10" id="wzj-lt-FYn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

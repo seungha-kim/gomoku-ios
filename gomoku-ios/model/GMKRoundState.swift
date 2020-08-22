@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+enum GMKRoundState {
+    case beforeStart
+    case onGame(currentTurnColor: GMKPieceColor)
+    case finished(determination: GMKRoundWinnerDetermination)
+}

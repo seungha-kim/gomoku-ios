@@ -10,21 +10,28 @@ import SnapKit
 import UIKit
 
 class ViewController: UIViewController {
-    lazy var myTestView = MyTestView()
     lazy var gameView = GMKOfflineDualGameView()
-
-    var round = GMKRound(rule: GMKRoundRuleBasicImpl())
+    var round: GMKRound!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        round.delegate = self
+        resetModel()
         setupViews()
     }
     
     func setupViews() {
         view = gameView
         gameView.boardView.delegate = self
+        gameView.delegate = self
+    }
+
+    private func resetModel() {
+        round = GMKRound(rule: GMKRoundRuleBasicImpl())
+        round.delegate = self
+    }
+    
+    private func resetView() {
+        gameView.boardView.reset()
     }
 }
 
@@ -35,6 +42,14 @@ extension ViewController: GMKBoardViewDelegate {
 }
 
 extension ViewController: GMKRoundDelegate {
+    func roundStarted() {
+        resetView()
+    }
+    
+    func roundFinished(with determination: GMKRoundWinnerDetermination) {
+        print(determination)
+    }
+    
     func roundUpdated(with event: GMKRoundEvent) {
         switch event {
         case .cellFilled(pos: let pos, color: let color):
@@ -42,5 +57,12 @@ extension ViewController: GMKRoundDelegate {
         default:
             print("TODO: debug log")
         }
+    }
+}
+
+extension ViewController: GMKOfflineDualGameViewDelegate {
+    func gameViewReceivedStartAction() {
+        resetModel()
+        round.start()
     }
 }

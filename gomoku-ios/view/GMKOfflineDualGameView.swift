@@ -11,7 +11,7 @@ import SnapKit
 
 class GMKOfflineDualGameView: UIView, UIViewConfiguration {
     var boardView = GMKBoardView()
-    var delegate: GMKOfflineDualGameViewDelegate?
+    weak var delegate: GMKOfflineDualGameViewDelegate?
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var boardSlot: UIView!
@@ -51,6 +51,6 @@ class GMKOfflineDualGameView: UIView, UIViewConfiguration {
     }
 }
 
-protocol GMKOfflineDualGameViewDelegate {
+protocol GMKOfflineDualGameViewDelegate: class {
     func gameViewReceivedStartAction()
 }

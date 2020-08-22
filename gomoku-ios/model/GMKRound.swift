@@ -13,10 +13,14 @@ class GMKRound {
     
     weak var delegate: GMKRoundDelegate?
     
+    var state: GMKRoundState = .beforeStart
     private var table: GMKTable
-    private var state: GMKRoundState = .beforeStart
     private let rule: GMKRoundRule
-    
+    var filledCellCount: Int {
+        get {
+            table.filledCellCount
+        }
+    }
     init(rule: GMKRoundRule) {
         self.rule = rule
         table = GMKTable(edgeLength: Self.EDGE_LENGTH)

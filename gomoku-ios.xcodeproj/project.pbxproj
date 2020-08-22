@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3BB88924F17ACE00549F99 /* gomoku_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3BB88824F17ACE00549F99 /* gomoku_iosTests.swift */; };
 		2A88C5C124EC28B600D35960 /* GMKTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C024EC28B600D35960 /* GMKTable.swift */; };
 		2A88C5C324EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C224EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift */; };
 		2A88C5C524EC2ADE00D35960 /* GMKRoundRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A88C5C424EC2ADE00D35960 /* GMKRoundRule.swift */; };
@@ -30,7 +31,20 @@
 		2AE17A4A24EAB9BA0073AA3D /* GMKRoundState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE17A4924EAB9BA0073AA3D /* GMKRoundState.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2A3BB88B24F17ACE00549F99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2AE17A1324EA6F8A0073AA3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2AE17A1A24EA6F8A0073AA3D;
+			remoteInfo = "gomoku-ios";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2A3BB88624F17ACE00549F99 /* gomoku-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gomoku-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A3BB88824F17ACE00549F99 /* gomoku_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gomoku_iosTests.swift; sourceTree = "<group>"; };
+		2A3BB88A24F17ACE00549F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A88C5C024EC28B600D35960 /* GMKTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKTable.swift; sourceTree = "<group>"; };
 		2A88C5C224EC2ACA00D35960 /* GMKRoundWinnerDetermination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundWinnerDetermination.swift; sourceTree = "<group>"; };
 		2A88C5C424EC2ADE00D35960 /* GMKRoundRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMKRoundRule.swift; sourceTree = "<group>"; };
@@ -56,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2A3BB88324F17ACE00549F99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AE17A1824EA6F8A0073AA3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,10 +88,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A3BB88724F17ACE00549F99 /* gomoku-iosTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A3BB88824F17ACE00549F99 /* gomoku_iosTests.swift */,
+				2A3BB88A24F17ACE00549F99 /* Info.plist */,
+			);
+			path = "gomoku-iosTests";
+			sourceTree = "<group>";
+		};
 		2AE17A1224EA6F8A0073AA3D = {
 			isa = PBXGroup;
 			children = (
 				2AE17A1D24EA6F8A0073AA3D /* gomoku-ios */,
+				2A3BB88724F17ACE00549F99 /* gomoku-iosTests */,
 				2AE17A1C24EA6F8A0073AA3D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				2AE17A1B24EA6F8A0073AA3D /* gomoku-ios.app */,
+				2A3BB88624F17ACE00549F99 /* gomoku-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +162,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2A3BB88524F17ACE00549F99 /* gomoku-iosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A3BB88D24F17ACE00549F99 /* Build configuration list for PBXNativeTarget "gomoku-iosTests" */;
+			buildPhases = (
+				2A3BB88224F17ACE00549F99 /* Sources */,
+				2A3BB88324F17ACE00549F99 /* Frameworks */,
+				2A3BB88424F17ACE00549F99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A3BB88C24F17ACE00549F99 /* PBXTargetDependency */,
+			);
+			name = "gomoku-iosTests";
+			productName = "gomoku-iosTests";
+			productReference = 2A3BB88624F17ACE00549F99 /* gomoku-iosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2AE17A1A24EA6F8A0073AA3D /* gomoku-ios */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AE17A2F24EA6F8C0073AA3D /* Build configuration list for PBXNativeTarget "gomoku-ios" */;
@@ -160,6 +210,10 @@
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Kim Seungha";
 				TargetAttributes = {
+					2A3BB88524F17ACE00549F99 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2AE17A1A24EA6F8A0073AA3D;
+					};
 					2AE17A1A24EA6F8A0073AA3D = {
 						CreatedOnToolsVersion = 11.6;
 					};
@@ -182,11 +236,19 @@
 			projectRoot = "";
 			targets = (
 				2AE17A1A24EA6F8A0073AA3D /* gomoku-ios */,
+				2A3BB88524F17ACE00549F99 /* gomoku-iosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2A3BB88424F17ACE00549F99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AE17A1924EA6F8A0073AA3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +262,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2A3BB88224F17ACE00549F99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A3BB88924F17ACE00549F99 /* gomoku_iosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AE17A1724EA6F8A0073AA3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -226,6 +296,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2A3BB88C24F17ACE00549F99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2AE17A1A24EA6F8A0073AA3D /* gomoku-ios */;
+			targetProxy = 2A3BB88B24F17ACE00549F99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		2AE17A2924EA6F8C0073AA3D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -238,6 +316,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2A3BB88E24F17ACE00549F99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDN4KLVAKZ;
+				INFOPLIST_FILE = "gomoku-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.seungha.gomoku-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gomoku-ios.app/gomoku-ios";
+			};
+			name = Debug;
+		};
+		2A3BB88F24F17ACE00549F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDN4KLVAKZ;
+				INFOPLIST_FILE = "gomoku-iosTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "me.seungha.gomoku-iosTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gomoku-ios.app/gomoku-ios";
+			};
+			name = Release;
+		};
 		2AE17A2D24EA6F8C0073AA3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -288,7 +408,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -342,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -391,6 +511,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A3BB88D24F17ACE00549F99 /* Build configuration list for PBXNativeTarget "gomoku-iosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A3BB88E24F17ACE00549F99 /* Debug */,
+				2A3BB88F24F17ACE00549F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AE17A1624EA6F8A0073AA3D /* Build configuration list for PBXProject "gomoku-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
